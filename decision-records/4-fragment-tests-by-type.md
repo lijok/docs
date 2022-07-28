@@ -26,3 +26,5 @@ Additional test types can be added as required.
 The tool used to run tests must support running only the tests under a particular directory.
 
 Developers may run just the fast tests locally as they're developing, to speed up their feedback loop, then offload the rest of the test suite to be run on CI/CD.
+
+Tests can be parallelized better in CI/CD.
