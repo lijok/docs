@@ -3,7 +3,7 @@
 ## Context
 Documentation is rarely read and rots as soon as it is written. This is a universally understood fact in engineering teams.
 
-Documentation rot sets in because the team members that write it over time learn enough context, that documentation and reference manuals become unnecessary for them. As that happens, maintaining documentation that is no longer required for those team members to do their function, becomes a mindless chore. Because documentation is often not stored next to the work it is documenting, it is infeasible to enforce that changes to work artifacts are presented together with documentation changes.
+Documentation rot sets in because the team members that write it over time learn enough context, that documentation and reference manuals become unnecessary for them. As that happens, maintaining documentation that is no longer required for those team members to do their function, becomes a mindless chore. Because documentation is often not stored next to the work it is documenting, it is infeasible to enforce that changes to work artefacts are presented together with documentation changes.
 
 When documentation is stored in systems such as Confluence, peer review is infeasible. This results in documentation that is in some cases incorrect right from the first edition.
 
