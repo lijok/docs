@@ -9,6 +9,8 @@ When decisions are not documented, or, documented in an inconsistent, difficult 
 - Frustration among team members, as certain conventions, without a documented rationale, get perceived as dogma
 - Loss in productivity as team members have to scour for information regarding how certain significant works should be implemented
 
+In 2018, Thoughtworks moved [Lightweight Architecture Decision Records](https://www.thoughtworks.com/en-gb/radar/techniques/lightweight-architecture-decision-records) to the "adopt" stage.
+
 ## Decision
 We will keep a collection of decision records for significant decisions.
 
