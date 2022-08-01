@@ -30,3 +30,13 @@ If a developer submits a PR with more than one change, they have to re-raise mul
 Developers can write whatever commit messages they like to keep track of their work, so long as the pull request message is well written. This lowers a developers cognitive load, especially during discovery phase of development.
 
 One complete change per pull request can be difficult for some developers to adjust to. This increases the cognitive load on developers who are not used to working in such a way.
+
+On platforms such as GitHub, unless overwritten, squashed commits reference and hyperlink the pull request which introduced the change. This can be used to view a more finegrained history of that particular change.
+
+Master can be backported into any branch frequently, without introducing merge commits into the final merge to master.
+
+Recursive merges do not show up in the history of the master branch.
+
+Commits such as `fix`, `typo`, `format` are nonexistent in master.
+
+Reverts of specific changes are simple as each commit in master represents a single, complete, buildable change.
