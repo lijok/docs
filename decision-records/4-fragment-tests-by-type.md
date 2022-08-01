@@ -3,7 +3,7 @@
 ## Context
 Running certain types of tests is expensive, and only gets more expensive over time as the number of tests grows.
 
-Teams must strive to create as fast of a feedback loop as possible.
+Teams must strive to create as fast of a feedback loop as possible, to maximize productivity and minimize developer frustration.
 
 ## Decision
 We will fragment tests by their type.

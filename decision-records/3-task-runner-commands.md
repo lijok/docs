@@ -54,7 +54,7 @@ Available commands:
     clean:             Cleanup
 ```
 
-Additional, project specific commands, should be avoided where possible. If absolutely required, such commands must come after the aforementioned ones.
+We will avoid additional, project specific commands where possible. If absolutely required, such commands must come after the aforementioned ones.
 
 ## Consequences
 Workflows between projects remain consistent, reducing the time it takes to onboard a new team member.

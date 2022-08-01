@@ -3,7 +3,7 @@
 ## Context
 Universally understood good practices such as standardized logging, tracing, metrics etc, can be very complicated to implement.
 
-Due to serious security implications when it comes to work involving encryption, hashing, secret handling, etc, developer autonomy and productivity is impacted as organizations tend to implement excessive processes around these pieces of work.
+Due to serious security implications when it comes to work involving encryption, hashing, secret handling, etc, developer autonomy and productivity is impacted as organizations tend to implement excessive processes around these pieces of work such as threat modelling.
 
 Lack of consistency among projects impacts lateral movement of developers within an organization, as onboarding times get heavily extended, due to each project feeling like it was written by another organization, requiring the developer to relearn common patterns.
 
@@ -36,14 +36,14 @@ We will implement, at a minimum, the following API's in these SDK's:
 - code formatting
 
 ## Consequences
-Cross-cutting concerns will be handled by the SDK's, allowing projects to be spun up and deployed to production quicker.
+Cross-cutting concerns are handled by the SDKs, allowing projects to be spun up and deployed to production quicker.
 
-Contexts such as logging, tracing and metrics will be in a standard format, consistent between services, and modifiable by the operations teams, allowing more freedom and unlocking more tooling options for operations to satisfy their observability needs.
+Contexts such as logging, tracing and metrics are in a standard format, consistent between services, and modifiable by the operations teams, allowing more freedom and unlocking more tooling options for operations to satisfy their observability needs.
 
-Entry requirements for a new developer will be reduced as some domain specific concerns will be handled already, opening us up to a larger candidate pool.
+Knowledge requirements for a new developer are lowered as some domain specific concerns are handled by the SDKs, which affords us a larger candidate pool.
 
-Extensive domain knowledge will be required to develop each of the API's.
+Extensive domain knowledge is required to develop each of the APIs.
 
-It will be faster and easier to keep the dependencies, build logic and cross-cutting concern logic up to date. You simply release a new version of the SDK that contains the needed changes, and update each service to use the new version.
+It is faster and easier to keep the dependencies, build logic and cross-cutting concern logic up to date. You simply release a new version of the SDK that contains the needed changes, and update each service to use the new version.
 
-You need an SDK/SDK API for each programming language/framework that you want to use. This can be an obstacle to adopting a new programming language or framework.
+We need an SDK/SDK API for each programming language/framework that we want to use. This can be an obstacle to adopting a new programming language or framework.

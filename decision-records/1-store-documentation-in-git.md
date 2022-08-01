@@ -19,6 +19,6 @@ Code and documentation can be updated in a single change, and corresponding proc
 
 Scripts can be stored alongside generic documentation, which allows for leaner documentation as rather than documenting execution steps, a script can be supplied, together with very short documentation.
 
-A GUI will have be provided to team members outside of engineering to write and modify documentation.
+A GUI is required for team members outside of engineering to write and modify decision records.
 
-Documenting higher level view of microservices will have to be done in the `documentation` repo, if the codebases of said microservices are separate.
+Documenting higher level view of microservices has to be done in the `documentation` repo, if the codebases of said microservices are separate.

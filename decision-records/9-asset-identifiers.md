@@ -1,7 +1,7 @@
 # Asset identifiers
 
 ## Context
-Case sensitivity is very common, we see it in Docker tags, linux file systems, simplistic search implementations, etc. Mixing uppercase and lowercase identifiers can cause issues such as:
+Case sensitivity is very common. We see it in Docker tags, linux file systems, simplistic search implementations, etc. Mixing uppercase and lowercase identifiers can cause issues such as:
 - Terraform state migrations become very tricky
 - Grafana queries have to know exact casing of identifiers
 - Prior to doing file lookups, filenames have to be normalized
@@ -15,6 +15,6 @@ We will use kebab-case, where possible, as word separators. Where not possible (
 Where numbering is required, i.e. decision records, multiple instances of a database - numbering schemes will start at 0, without any padding (don't use something like 001).
 
 ## Consequences
-Asset names will remain consistent where allowed by our tool stack.
+Asset names remain consistent where allowed by our tool stack.
 
-Inconsistencies will be introduced where 3rd party software or services do not support kebab-case (e.g. some AWS services).
+Inconsistencies are introduced when 3rd party software or services do not support kebab-case (e.g. some AWS services).

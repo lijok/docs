@@ -9,4 +9,4 @@ Git is the most widely used version control system, and in turn, has the largest
 We will use Git for version control.
 
 ## Consequences
-Git does not deal well with large files, so LFS will have to be used for large asset storage.
+Git does not deal well with large files, so LFS has to be used for large asset storage.

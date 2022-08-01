@@ -1,7 +1,7 @@
 # Simple CI/CD workflows
 
 ## Context
-CI/CD workflows are very difficult to test, as tooling for written, reproducible CI/CD workflow testing does not exist. Therefore, the only way to test your CI/CD workflows is to make changes to them, push, and hope for the best. This gets particularly tricky and dangerous if you have to test CI/CD workflows that manage deployments.
+CI/CD workflows are very difficult to test, as mature tooling for written, reproducible CI/CD workflow testing does not exist. Therefore, the only way to test your CI/CD workflows is to make changes to them, push, and hope for the best. This gets particularly tricky and dangerous if you have to test CI/CD workflows that manage deployments.
 
 CI/CD is one of the most in-flux systems in any company. Migrations to a different CI/CD system happen every couple of years, as new, cheaper, more convenient alternatives come out.
 
@@ -14,7 +14,7 @@ We will offload all CI/CD workflow logic outside of the workflow file, and into 
 
 We will utilize CI/CD simply for invoking a script, on a parallelized environment, in response to events.
 
-An example of a simple, paralellized GitHub Actions CI/CD workflow:
+An example of a simple, parallelized GitHub Actions CI/CD workflow:
 ```yml
 name: test
 on:
@@ -64,7 +64,7 @@ jobs:
 ```
 
 ## Consequences
-CI/CD workflows will require minimal testing, and invoked scripts can be tested locally.
+CI/CD workflows require minimal testing, and invoked scripts can be tested locally.
 
 Migrations between CI/CD tools can be undertaken more easily.
 

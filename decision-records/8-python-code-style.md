@@ -19,6 +19,6 @@ The aforementioned rules will be implemented in the `python-sdk` cli utility, un
 ## Consequences
 Lines that approach the 120 character length, may not be viewable on smaller screens if two editors windows are open side by side.
 
-Debates around code style, be they in person or in peer reviews, will be cut short by referencing this decision record
+Debates around code style, be they in person or in peer reviews, can be cut short by referencing this decision record.
 
 Developers can write code in whatever style they prefer, allowing formatting tools to reformat their code before checking it in.
