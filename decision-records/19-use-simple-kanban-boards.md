@@ -15,5 +15,7 @@ We will have the following columns on our Kanban boards:
 - Review
 - Done
 
+We will not integrate our Git hosting provider (e.g. GitHub), with our kanban boards.
+
 ## Consequences
 Our Kanban boards are responsive and simple.
