@@ -22,3 +22,5 @@ Scripts can be stored alongside generic documentation, which allows for leaner d
 A GUI is required for team members outside of engineering to write and modify decision records.
 
 Documenting higher level view of microservices has to be done in the `documentation` repo, if the codebases of said microservices are separate.
+
+Documentation can be checked out locally, making it available when offline, and at a more convenient, familiar location.
