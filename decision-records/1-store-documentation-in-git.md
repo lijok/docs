@@ -24,3 +24,5 @@ A GUI is required for team members outside of engineering to write and modify de
 Documenting higher level view of microservices has to be done in the `documentation` repo, if the codebases of said microservices are separate.
 
 Documentation can be checked out locally, making it available when offline, and at a more convenient, familiar location.
+
+In the event of a disaster, disaster recovery and business continuity plans are available locally to those that have checked out the `documentation` repo.
