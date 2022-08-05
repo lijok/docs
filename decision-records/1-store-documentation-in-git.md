@@ -26,3 +26,7 @@ Documenting higher level view of microservices has to be done in the `docs` repo
 Documentation can be checked out locally, making it available when offline, and at a more convenient, familiar location.
 
 In the event of a disaster, disaster recovery and business continuity plans are available locally to those that have checked out the `docs` repo.
+
+Storing documentation under `docs` directory in each project maximizes compatibility with 3rd party tooling, i.e. GitHub and GitLab requires for CODEOWNERS file to be stored in one of few locations, one of which is under `docs`.
+
+Calling global documentation repository `docs`, retains consistency with respect to project-specific documentation being stored under a `docs` directory.
