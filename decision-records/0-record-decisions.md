@@ -16,7 +16,7 @@ We will keep a collection of decision records for significant decisions.
 
 A decision record is a short text file in a format similar to an Alexandrian pattern. Each record describes a set of forces and a single decision in response to those forces. Note that the decision is the central piece here, so specific forces may appear in multiple decision records.
 
-We will keep global, cross-project decision records in the `documentation` repository, under the `decision-records` directory.
+We will keep global, cross-project decision records in the `docs` repository, under the `decision-records` directory.
 
 We will keep project-specific decision records in the project repository under `docs/decision-records`.
 

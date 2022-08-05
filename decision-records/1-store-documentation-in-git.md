@@ -12,7 +12,7 @@ By storing documentation local to the work it is documenting, in a version contr
 ## Decision
 We will store all documentation in Git.
 
-Project documentation will be stored in that projects repository under `docs`. All other documentation will be stored in the `documentation` repository.
+Project documentation will be stored in that projects repository under `docs`. All other documentation will be stored in the `docs` repository.
 
 ## Consequences
 Code and documentation can be updated in a single change, and corresponding processes can be developed to enforce that.
@@ -21,8 +21,8 @@ Scripts can be stored alongside generic documentation, which allows for leaner d
 
 A GUI is required for team members outside of engineering to write and modify decision records.
 
-Documenting higher level view of microservices has to be done in the `documentation` repo, if the codebases of said microservices are separate.
+Documenting higher level view of microservices has to be done in the `docs` repo, if the codebases of said microservices are separate.
 
 Documentation can be checked out locally, making it available when offline, and at a more convenient, familiar location.
 
-In the event of a disaster, disaster recovery and business continuity plans are available locally to those that have checked out the `documentation` repo.
+In the event of a disaster, disaster recovery and business continuity plans are available locally to those that have checked out the `docs` repo.
