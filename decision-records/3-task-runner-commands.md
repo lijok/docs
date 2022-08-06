@@ -15,7 +15,6 @@ We will implement the following commands in the task runner on all projects:
 - setup
 - test
 - test-all
-- test-all-versions
 - acceptance-test
 - integration-test
 - load-test
@@ -38,7 +37,6 @@ Available commands:
     setup:             Setup the environment
     test:              Run fast tests
     test-all:          Run all tests
-    test-all-versions: Run all tests on all supported versions
     acceptance-test:   Run acceptance tests
     integration-test:  Run integration tests
     load-test:         Run load tests
