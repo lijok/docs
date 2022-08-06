@@ -27,7 +27,7 @@ Peer review must enforce the concept of one complete change per pull request.
 
 If a developer submits a PR with more than one change, they have to re-raise multiple PRs instead.
 
-Developers can write whatever commit messages they like to keep track of their work, so long as the pull request message is well written. This lowers a developers cognitive load, especially during discovery phase of development.
+Developers can write whatever commit messages they like to keep track of their work, so long as the pull request message is well written. This lowers a developers cognitive load, especially during discovery phase of development, such as when debugging CI/CD workflows.
 
 One complete change per pull request can be difficult for some developers to adjust to. This increases the cognitive load on developers who are not used to working in such a way.
 
