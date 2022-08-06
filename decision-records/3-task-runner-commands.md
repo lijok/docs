@@ -54,6 +54,35 @@ Available commands:
 
 We will avoid additional, project specific commands where possible. If absolutely required, such commands must come after the aforementioned ones.
 
+If project specific commands are required, the output of the help command should look like this (`test-all-versions` and `debug` being used as example commands):
+```sh
+Available commands:
+
+    help:              Show this page
+    setup:             Setup the environment
+    test:              Run fast tests
+    test-all:          Run all tests
+    acceptance-test:   Run acceptance tests
+    integration-test:  Run integration tests
+    load-test:         Run load tests
+    performance-test:  Run performance tests
+    property-test:     Run property tests
+    system-test:       Run system tests
+    unit-test:         Run unit tests
+    lint:              Run the linters
+    fmt:               Format the codebase
+    package:           Package
+    publish:           Publish
+    install:           Install
+    clean:             Cleanup
+
+
+Project-specific commands:
+
+    test-all-versions: Run all tests on all supported versions
+    debug:             Start interactive debugger
+```
+
 ## Consequences
 Workflows between projects remain consistent, reducing the time it takes to onboard a new team member.
 
@@ -62,3 +91,5 @@ New tools to back certain commands can be introduced more easily as the training
 Commands can be reused in CI/CD, facilitating simpler workflows.
 
 Some of the test commands (`system-test`, `acceptance-test`, etc), may not be implemented as no such tests may exist on a particular project. In such cases, the command should simply output `Nothing to do` and successfully exit.
+
+Project specific commands immediately stand out as they are not normally present.
