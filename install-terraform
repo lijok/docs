@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+TERRAFORM_VERSION="1.2.6"
+APPLE_CODESIGN_TEAM_IDENTIFIER="D38WU7D763"
+
+OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
+PROC="$(uname -m)"
+if [[ "${PROC}" == "x86_64" ]]; then PROC="amd64"; fi
+FILENAME="terraform_${TERRAFORM_VERSION}_${OS}_${PROC}.zip"
+CHECKSUMS_FILENAME="terraform_${TERRAFORM_VERSION}_SHA256SUMS"
+BINARY_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/${FILENAME}"
+CHECKSUMS_URL="https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/${CHECKSUMS_FILENAME}"
+
+wget --output-document "${FILENAME}" "${BINARY_URL}"
+wget --output-document "${CHECKSUMS_FILENAME}" "${CHECKSUMS_URL}"
+
+# confirm checksums
+shasum --algorithm 256 --ignore-missing --check "${CHECKSUMS_FILENAME}"
+rm "${CHECKSUMS_FILENAME}"
+
+unzip -o "${FILENAME}"
+
+if [[ "${OS}" == "darwin" ]]; then
+  # codesign writes to stderr, so we need to pipe stdout to stderr (2>&1)
+  TEAM_IDENTIFIER="$(codesign --verify -d --verbose=2 terraform 2>&1 | grep 'TeamIdentifier=' | sed 's/TeamIdentifier=//')"
+
+  if [[ "${TEAM_IDENTIFIER}" != "${APPLE_CODESIGN_TEAM_IDENTIFIER}" ]]; then
+    echo -e "\n"
+    echo -e "\033[0;31mERROR"
+    echo -e "\033[0;31mApple Codesign team identifier for this binary does not match."
+    echo -e "\033[0;31mExpected: ${APPLE_CODESIGN_TEAM_IDENTIFIER}."
+    echo -e "\033[0;31mGot: ${TEAM_IDENTIFIER}."
+    echo -e "\033[0;31mHashicorp team identifier may have changed."
+    echo -e "\033[0;31mHashicorp team identifier can be found at https://www.hashicorp.com/security."
+    echo -e "\033[0;31mPlease notify your team lead."
+
+    rm "${FILENAME}"
+    rm "./terraform"
+    exit 1
+  fi
+fi
+
+# move terraform binary to ~/.local/bin
+mkdir -p "${HOME}/.local/bin"
+mv terraform "${HOME}/.local/bin"
+rm "${FILENAME}"
+
+# ensure required files exist for autocompletion
+touch ~/.bashrc
+touch ~/.zshrc
+
+# ensure ~/.local/bin is present in PATH
+EXPORT_STRING='export PATH="$HOME/.local/bin:$PATH"'
+if ! grep -Fxq "${EXPORT_STRING}" ~/.bashrc; then echo "${EXPORT_STRING}" >> ~/.bashrc; fi
+if ! grep -Fxq "${EXPORT_STRING}" ~/.zshrc; then echo "${EXPORT_STRING}" >> ~/.zshrc; fi
+
+# install terraform autocomplete
+# pipe stdout and stderr (2>&1) to /dev/null and ignore errors (|| true) because this fails if autocomplete is already
+# installed
+terraform -install-autocomplete > /dev/null 2>&1 || true
