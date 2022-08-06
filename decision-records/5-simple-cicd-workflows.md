@@ -26,7 +26,7 @@ on:
 
 jobs:
   test:
-    name: test ${{ matrix.os }} python${{ matrix.python-version }}
+    name: ${{ matrix.test-type }} ${{ matrix.os }} python${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}
 
     strategy:
@@ -41,6 +41,13 @@ jobs:
           - "3.8"
           - "3.9"
           - "3.10"
+        test-type:
+          - "acceptance-test"
+          - "integration-test"
+          - "performance-test"
+          - "property-test"
+          - "system-test"
+          - "unit-test"
 
     steps:
       - name: checkout repo
@@ -58,7 +65,7 @@ jobs:
           key: python-${{ matrix.python-version }}-${{ matrix.os }}-${{ hashFiles('pyproject.toml') }}
 
       - name: run tests
-        run: make test-all
+        run: make ${{ matrix.test-type }}
         env:
           PYTHON_VERSION: ${{ matrix.python-version }}
 ```
