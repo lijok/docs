@@ -64,7 +64,6 @@ Available commands:
     test-all:          Run all tests
     acceptance-test:   Run acceptance tests
     integration-test:  Run integration tests
-    load-test:         Run load tests
     performance-test:  Run performance tests
     property-test:     Run property tests
     system-test:       Run system tests
