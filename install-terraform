@@ -2,7 +2,13 @@
 
 set -euo pipefail
 
-TERRAFORM_VERSION="1.2.6"
+# :- following TERRAFORM_VERSION allows for the variable to be unbound even when set -u
+if [ -z "${TERRAFORM_VERSION:-}" ]; then
+  echo "Please set TERRAFORM_VERSION to the version you would like to be installed."
+  echo "e.g.: TERRAFORM_VERSION=1.26.0 ./install-terraform"
+  exit 1
+fi
+
 APPLE_CODESIGN_TEAM_IDENTIFIER="D38WU7D763"
 
 OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
