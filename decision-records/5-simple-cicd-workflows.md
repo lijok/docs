@@ -42,14 +42,14 @@ jobs:
           - "3.9"
           - "3.10"
         test-type:
-          - "acceptance-test"
-          - "functional-test"
+          - "unit-test"
           - "integration-test"
-          - "performance-test"
           - "property-test"
+          - "functional-test"
           - "security-test"
           - "system-test"
-          - "unit-test"
+          - "acceptance-test"
+          - "performance-test"
 
     steps:
       - name: checkout repo

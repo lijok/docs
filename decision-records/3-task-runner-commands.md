@@ -37,14 +37,14 @@ Available commands:
     setup:             Setup the environment
     test:              Run fast tests
     test-all:          Run all tests
-    acceptance-test:   Run acceptance tests
-    functional-test:   Run functional tests
+    unit-test:         Run unit tests
     integration-test:  Run integration tests
-    performance-test:  Run performance tests
     property-test:     Run property tests
+    functional-test:   Run functional tests
     security-test:     Run security tests
     system-test:       Run system tests
-    unit-test:         Run unit tests
+    acceptance-test:   Run acceptance tests
+    performance-test:  Run performance tests
     fmt:               Format the codebase
     package:           Package
     publish:           Publish
@@ -62,14 +62,14 @@ Available commands:
     setup:             Setup the environment
     test:              Run fast tests
     test-all:          Run all tests
-    acceptance-test:   Run acceptance tests
-    functional-test:   Run functional tests
+    unit-test:         Run unit tests
     integration-test:  Run integration tests
-    performance-test:  Run performance tests
     property-test:     Run property tests
+    functional-test:   Run functional tests
     security-test:     Run security tests
     system-test:       Run system tests
-    unit-test:         Run unit tests
+    acceptance-test:   Run acceptance tests
+    performance-test:  Run performance tests
     fmt:               Format the codebase
     package:           Package
     publish:           Publish
