@@ -11,13 +11,14 @@ We will fragment tests by their type.
 The `tests` directory of a project will look like this:
 ```sh
 tests
-├── acceptance
+└── acceptance
+├── functional
 ├── integration
-├── load
 ├── performance
 ├── property
+├── security
 ├── system
-└── unit
+├── unit
 ```
 
 Additional test types can be added as required.

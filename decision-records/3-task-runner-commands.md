@@ -16,13 +16,13 @@ We will implement the following commands in the task runner on all projects:
 - test
 - test-all
 - acceptance-test
+- functional-test
 - integration-test
-- load-test
 - performance-test
 - property-test
+- security-test
 - system-test
 - unit-test
-- lint
 - fmt
 - package
 - publish
@@ -38,13 +38,13 @@ Available commands:
     test:              Run fast tests
     test-all:          Run all tests
     acceptance-test:   Run acceptance tests
+    functional-test:   Run functional tests
     integration-test:  Run integration tests
-    load-test:         Run load tests
     performance-test:  Run performance tests
     property-test:     Run property tests
+    security-test:     Run security tests
     system-test:       Run system tests
     unit-test:         Run unit tests
-    lint:              Run the linters
     fmt:               Format the codebase
     package:           Package
     publish:           Publish
@@ -63,12 +63,13 @@ Available commands:
     test:              Run fast tests
     test-all:          Run all tests
     acceptance-test:   Run acceptance tests
+    functional-test:   Run functional tests
     integration-test:  Run integration tests
     performance-test:  Run performance tests
     property-test:     Run property tests
+    security-test:     Run security tests
     system-test:       Run system tests
     unit-test:         Run unit tests
-    lint:              Run the linters
     fmt:               Format the codebase
     package:           Package
     publish:           Publish

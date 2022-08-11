@@ -43,9 +43,11 @@ jobs:
           - "3.10"
         test-type:
           - "acceptance-test"
+          - "functional-test"
           - "integration-test"
           - "performance-test"
           - "property-test"
+          - "security-test"
           - "system-test"
           - "unit-test"
 
