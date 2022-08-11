@@ -93,3 +93,5 @@ Commands can be reused in CI/CD, facilitating simpler workflows.
 Some of the test commands (`system-test`, `acceptance-test`, etc), may not be implemented as no such tests may exist on a particular project. In such cases, the command should simply output `Nothing to do` and successfully exit.
 
 Project specific commands immediately stand out as they are not normally present.
+
+Developers can run `make test` in projects and expect a short feedback loop as the command only runs fast tests.
