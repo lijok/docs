@@ -47,7 +47,7 @@ jobs:
           - "property-test"
           - "functional-test"
           - "security-test"
-          - "system-test"
+          - "smoke-test"
           - "acceptance-test"
           - "performance-test"
 

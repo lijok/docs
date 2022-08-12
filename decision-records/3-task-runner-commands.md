@@ -21,7 +21,7 @@ We will implement the following commands in the task runner on all projects:
 - performance-test
 - property-test
 - security-test
-- system-test
+- smoke-test
 - unit-test
 - fmt
 - package
@@ -42,7 +42,7 @@ Available commands:
     property-test:     Run property tests
     functional-test:   Run functional tests
     security-test:     Run security tests
-    system-test:       Run system tests
+    smoke-test:        Run smoke tests
     acceptance-test:   Run acceptance tests
     performance-test:  Run performance tests
     fmt:               Format the codebase
@@ -67,7 +67,7 @@ Available commands:
     property-test:     Run property tests
     functional-test:   Run functional tests
     security-test:     Run security tests
-    system-test:       Run system tests
+    smoke-test:        Run smoke tests
     acceptance-test:   Run acceptance tests
     performance-test:  Run performance tests
     fmt:               Format the codebase
@@ -90,7 +90,7 @@ New tools to back certain commands can be introduced more easily as the training
 
 Commands can be reused in CI/CD, facilitating simpler workflows.
 
-Some of the test commands (`system-test`, `acceptance-test`, etc), may not be implemented as no such tests may exist on a particular project. In such cases, the command should simply output `Nothing to do` and successfully exit.
+Some of the test commands (`smoke-test`, `acceptance-test`, etc), may not be implemented as no such tests may exist on a particular project. In such cases, the command should simply output `Nothing to do` and successfully exit.
 
 Project specific commands immediately stand out as they are not normally present.
 

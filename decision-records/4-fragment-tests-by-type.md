@@ -17,7 +17,7 @@ tests
 ├── performance
 ├── property
 ├── security
-├── system
+├── smoke
 ├── unit
 ```
 
