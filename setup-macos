@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+touch ~/.bashrc
+mkdir -p "${HOME}/.local/bin"
+mkdir -p "${HOME}/.local/lib"
+mkdir -p "${HOME}/.local/share"
+mkdir -p "${HOME}/.local/homebrew"
+
+# Install Command Line Tools for Xcode
+xcode-select --install || true
+
+# Install brew
+git clone https://github.com/Homebrew/brew.git "${HOME}/.local/homebrew"
+# Point current bash session to newly installed brew
+eval "$(~/.local/homebrew/bin/brew shellenv)"
+brew update --force
+
+# Place brew env vars in ~/.bashrc
+~/.local/homebrew/bin/brew shellenv >> ~/.bashrc
+
+# Ensure ~/.local/bin is the first place bash looks for binaries
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+
+# Install required binaries
+brew install git
+brew install gpg
+brew install curl
+brew install wget
+brew install make
+brew install bash
+brew install grep
+brew install jq
+brew install python@3.8
+brew install python@3.9
+brew install python@3.10
+
+# Setup Git
+git config --global user.email "lijok@pm.me"
+git config --global user.name "lijok"
+
+# Disable mouse acceleration
+defaults write .GlobalPreferences com.apple.mouse.scaling -1
+efaults write .GlobalPreferences com.apple.mouse.scaling -1
