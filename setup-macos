@@ -9,37 +9,61 @@ mkdir -p "${HOME}/.local/share"
 mkdir -p "${HOME}/.local/homebrew"
 
 # Install Command Line Tools for Xcode
-xcode-select --install || true
+chomp() {
+  printf "%s" "${1/"$'\n'"/}"
+}
+
+# This temporary file prompts the 'softwareupdate' utility to list the Command Line Tools
+clt_placeholder="/tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress"
+touch "${clt_placeholder}"
+
+clt_label_command="softwareupdate -l |
+                    grep -B 1 -E 'Command Line Tools' |
+                    awk -F'*' '/^ *\\*/ {print \$2}' |
+                    sed -e 's/^ *Label: //' -e 's/^ *//' |
+                    sort -V |
+                    tail -n1"
+clt_label="$(chomp "$(bash -c "${clt_label_command}")")"
+
+if [[ -n "${clt_label}" ]]
+then
+  echo "Installing ${clt_label}"
+  softwareupdate -i "${clt_label}"
+  sudo xcode-select --switch "/Library/Developer/CommandLineTools"
+fi
+rm -f "${clt_placeholder}"
 
 # Install brew
-git clone https://github.com/Homebrew/brew.git "${HOME}/.local/homebrew"
-# Point current bash session to newly installed brew
-eval "$(~/.local/homebrew/bin/brew shellenv)"
-brew update --force
+curl --location https://github.com/Homebrew/brew/tarball/master | tar -xz --strip 1 -C "${HOME}/.local/homebrew"
 
 # Place brew env vars in ~/.bashrc
 ~/.local/homebrew/bin/brew shellenv >> ~/.bashrc
+
+# Point current bash session to newly installed brew
+source ~/.bashrc
+brew update --force
+#chmod -R go-w "$(brew --prefix)/share/zsh"
 
 # Ensure ~/.local/bin is the first place bash looks for binaries
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
 
 # Install required binaries
 brew install git
-brew install gpg
-brew install curl
-brew install wget
-brew install make
-brew install bash
-brew install grep
-brew install jq
-brew install python@3.8
-brew install python@3.9
-brew install python@3.10
+# brew install gpg
+# brew install curl
+# brew install wget
+# brew install make
+# brew install bash
+# brew install grep
+# brew install jq
+# brew install python@3.8
+# brew install python@3.9
+# brew install python@3.10
 
 # Setup Git
-git config --global user.email "lijok@pm.me"
-git config --global user.name "lijok"
+#git config --global user.email "lijok@pm.me"
+#git config --global user.name "lijok"
 
 # Disable mouse acceleration
-defaults write .GlobalPreferences com.apple.mouse.scaling -1
-efaults write .GlobalPreferences com.apple.mouse.scaling -1
+#defaults write .GlobalPreferences com.apple.mouse.scaling -1
+#defaults write .GlobalPreferences com.apple.mouse.scaling -1
