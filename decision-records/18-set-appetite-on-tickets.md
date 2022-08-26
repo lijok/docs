@@ -10,6 +10,8 @@ We will set an appetite, on all tickets, counted in man-days.
 
 We will communicate back to the business any work that exceeds the set appetite, so it can be descoped, split out into smaller pieces of work or rethought.
 
+We will assume critical bugs, and other immediately prioritized tickets to have infinite appetite.
+
 ## Consequences
 Work can be prioritised by its ROI (how much appetite there is versus how long it will take).
 
