@@ -5,12 +5,12 @@ Git supports many workflows, each with their own pros and cons. This causes endl
 
 Git flow, a complex, widely popular git workflow, gives semantic meaning to branches and accommodates complex release workflows.
 
-[Scaled trunk-based development](#https://trunkbaseddevelopment.com/#scaled-trunk-based-development) is the simplest git workflow that does not compromise the stability of the master branch, scales with team size, allows to easily undo and hotfix mistakes, and does not create cognitive overhead for the team.
+[Scaled trunk-based development](https://trunkbaseddevelopment.com/#scaled-trunk-based-development) is the simplest git workflow that does not compromise the stability of the master branch, scales with team size, allows to easily undo and hotfix mistakes, and does not create cognitive overhead for the team.
 
 Releases can be automated by triggering CI/CD builds off of a git tag, or a push to master.
 
 ## Decision
-We will do [scaled trunk-based development](#https://trunkbaseddevelopment.com/#scaled-trunk-based-development).
+We will do [scaled trunk-based development](https://trunkbaseddevelopment.com/#scaled-trunk-based-development).
 
 ## Consequences
 Trunk-based development may be difficult to adjust to for people used to git flow.
