@@ -26,3 +26,5 @@ A teams work can be managed by the team lead without them getting overburdened b
 Robust communication ethic must be established within a team to ensure team members have all the help they need, and things like scope creep and useless work are kept at bay.
 
 Backlog has to be refined continuously.
+
+Retrospectives will continue without any commitments to the scrum process, such as being timeboxed to a particular hour of a particular day of the week.
