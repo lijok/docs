@@ -17,7 +17,6 @@ We will implement the following commands in the task runner on all projects:
 - test-all
 - acceptance-test
 - functional-test
-- integration-test
 - performance-test
 - property-test
 - security-test
@@ -38,7 +37,6 @@ Available commands:
     test:              Run fast tests
     test-all:          Run all tests
     unit-test:         Run unit tests
-    integration-test:  Run integration tests
     property-test:     Run property tests
     functional-test:   Run functional tests
     security-test:     Run security tests
@@ -63,7 +61,6 @@ Available commands:
     test:              Run fast tests
     test-all:          Run all tests
     unit-test:         Run unit tests
-    integration-test:  Run integration tests
     property-test:     Run property tests
     functional-test:   Run functional tests
     security-test:     Run security tests

@@ -13,7 +13,6 @@ The `tests` directory of a project will look like this:
 tests
 └── acceptance
 ├── functional
-├── integration
 ├── performance
 ├── property
 ├── security

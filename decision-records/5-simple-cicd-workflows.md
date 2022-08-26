@@ -43,7 +43,6 @@ jobs:
           - "3.10"
         test-type:
           - "unit-test"
-          - "integration-test"
           - "property-test"
           - "functional-test"
           - "security-test"
